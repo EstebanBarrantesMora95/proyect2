@@ -1,0 +1,32 @@
+<h3>{{titulo}}</h3>
+<hr/>
+
+<form #formClient="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-Client">
+<label>
+    Identification
+   <!-- <span *ngIf="!identification.valid && identification.touced" class="badge badge-warning">La identification es obligatorio</span>
+   -->
+</label>
+<input type="text" #identification="ngModel"  name="clientIdentification" [(ngModel)]="client.clientIdentification" class="form-control" required/>
+
+
+
+<label>
+    Nombre
+  <!--  <span *ngIf="!nombre.valid && nombre.touced" class="badge badge-warning">El nombre es obligatorio</span>
+ -->
+</label>
+<input type="text"#nombre="ngModel"  name="name" [(ngModel)]="client.name" class="form-control" required/>
+
+<label>Apellidos</label>
+<input type="text" #apellidos="ngModel"  name="lastname" [(ngModel)]="client.lastname"  class="form-control"/>
+
+<label>Telefono</label>
+<input type="text" #telefono="ngModel"  name="telephone" [(ngModel)]="client.telephone" class="form-control"/>
+
+<label>Direccion</label>
+<textarea  #direccion="ngModel"  name="address" [(ngModel)]="client.address" class="form-control"></textarea>
+
+<br/>
+<input type="submit" value="{{titulo}}" class="btn btn-success"/>
+</form>

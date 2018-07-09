@@ -1,0 +1,14 @@
+<h3>{{titulo}}</h3>
+<hr/>
+<div *ngIf="!client">
+    Cargando listado de productos...
+</div>
+
+<div *ngIf="client">
+    <ul>
+        <li *ngFor ="let cliente of clients">
+            <strong>{{client.nombre}}</strong>
+            <p>{{client.lastname}}</p>
+        </li>
+    </ul>
+</div>

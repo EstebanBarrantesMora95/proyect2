@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div  class="col-lg-10 col-lg-offset-1" id="content">
+  <header id="header" class="col-lg-12"[style.background]="header_color">
+  <h1>
+    Bienvenidos a {{ title }}!
+  </h1>
+</header>
+
+<nav id="nav" class="col-lg-12">
+ <ul>
+    <li><a [routerLink]="['/home']"[routerLinkActive]="['activado']">Home</a></li>
+    <li><a [routerLink]="['/client-add']"[routerLinkActive]="['activado']">Agregar Cliente</a></li>
+    <li><a [routerLink]="['/client']"[routerLinkActive]="['activado']">Editar Cliente</a></li>
+    <li><a href="#">Registar Orden</a></li>
+  </ul>
+</nav>
+<section id="main" class="col-lg-12">
+    <div class="clearfix"></div>
+
+<router-outlet>
+  
+</router-outlet>
+</section>
+<footer id="footer" class="col-lg-12">
+  <p>Taller Mecanico</p>
+</footer>
+
+
+  </div>
+
+
