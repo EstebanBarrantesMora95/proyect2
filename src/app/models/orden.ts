@@ -1,10 +1,15 @@
 export class Orden{
-    constructor( public clientIdentification:string ,
-        public  name:string,
-        public  lastname:string,
-        public  telephone:string,
-        public  address:string){
+    constructor( public workOrderId:number ,
+        public  description:string,
+        public  tentativeDate:Date,
+        public  detailsPrice:number,
+        public  laborPrice:number,
+        public  clientIdentification:string,
+        public  licenseNumber:string
+    ){
       
     }
-    
+
     }
+
+    

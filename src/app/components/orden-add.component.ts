@@ -18,7 +18,7 @@ export class OrdenAddComponent{
         private _router: Router
     ){
         this.titulo='Crear una nueva Orden'
-        this.orden=new Orden('','','','','');
+        this.orden=new Orden(0,'',null,0,0,'','');
     }
 
     ngOnInit(){
