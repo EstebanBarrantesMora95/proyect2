@@ -5,11 +5,14 @@ import{HomeComponent}from './components/home.components';
 import{ErrorComponent} from './components/error.components';
 import{ClientListComponent} from './components/client-list.component';
 import{ClientAddComponent} from './components/client-add.component';
+import{OrdenAddComponent} from './components/orden-add.component';
+
 const appRoutes: Routes=[
     {path:'',component:HomeComponent},
     {path:'home',component:HomeComponent},
     {path:'client',component:ClientListComponent},
     {path:'client-add',component:ClientAddComponent},
+    {path:'orden-add',component:OrdenAddComponent},
     {path:'**',component:ErrorComponent}
 ];
 

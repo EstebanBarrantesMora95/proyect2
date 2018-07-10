@@ -30,20 +30,20 @@ export class ClientAddComponent{
     onSubmit(){
         console.log(this.client);
 
-    //    this._clientService.addClient(this.client).subscribe(
-     //       response =>{
-       //         if(response.code==200){
-         //           this._router.navigate(['/client'])
-        //        }else{
-          //          console.log(response);
-           //     }
+        this._clientService.addClient(this.client).subscribe(
+           response =>{
+                if(response){
+                    this._router.navigate(['/client'])
+              }else{
+                   console.log(response);
+                }
 
-          //  },
-           // error=>{
-            //    console.log(<any>error)
-            //}
+          },
+            error=>{
+                console.log(<any>error)
+            }
 
-       // )
+        )
 
     }
 }

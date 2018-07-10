@@ -23,12 +23,12 @@ private _clientService: Listar_clientServices
 
       this._clientService.getClientes().subscribe(
       result=>{
-       //  this.client = result.data;
-        // if(result.code !=200){
-      //       console.log(result)
-      //   }else{
-     //        this.client=result.data;
-      //   }
+         this.client = result;
+         if(result){
+            console.log(result)
+         }else{
+           this.client=result;
+       }
 
 
       },error=>{
@@ -37,4 +37,13 @@ private _clientService: Listar_clientServices
      );
 
      }
+
+     getClient(){
+
+        return this.client;
+     }
+
+
+
+
  }

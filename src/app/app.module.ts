@@ -10,10 +10,12 @@ import {routing, appRoutingProviders}from './app.routing'
 import { AppComponent } from './app.component';
 import {HomeComponent} from './components/home.components';
 import {ErrorComponent} from './components/error.components';
+import {OrdenAddComponent} from './components/orden-add.component';
 import {ClientListComponent} from './components/client-list.component';
 import{ClientAddComponent} from './components/client-add.component';
 
 import {Listar_clientServices} from './services/clientLista.service';
+import {OrdenServices} from './services/orden.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import {Listar_clientServices} from './services/clientLista.service';
     HomeComponent,
     ErrorComponent,
     ClientListComponent,
-    ClientAddComponent
+    ClientAddComponent,
+    OrdenAddComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import {Listar_clientServices} from './services/clientLista.service';
   ],
   providers: [
     appRoutingProviders,
-    Listar_clientServices
+    Listar_clientServices,
+    OrdenServices
   ],
   bootstrap: [AppComponent]
 })
