@@ -3,24 +3,21 @@
 
 <form #formClient="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-Order">
 <label>
-    Identification
+    Descripcion de la Orden
    <!-- <span *ngIf="!identification.valid && identification.touced" class="badge badge-warning">La identification es obligatorio</span>
    -->
 </label>
-<input type="text" #identification="ngModel"  name="clientIdentification" [(ngModel)]="client.clientIdentification" class="form-control" required/>
+<textarea type="text" #description="ngModel"  name="description" [(ngModel)]="order.description" class="form-control" required></textarea>
 
 <label>
-    Nombre
+    Identificacion del cliente
   <!--  <span *ngIf="!nombre.valid && nombre.touced" class="badge badge-warning">El nombre es obligatorio</span>
  -->
 </label>
-<input type="text" #identification="ngModel"  name="clientIdentification" [(ngModel)]="client.clientIdentification" class="form-control" required/>
-<label>Apellidos</label>
-<input type="text" #identification="ngModel"  name="clientIdentification" [(ngModel)]="client.clientIdentification" class="form-control" required/>
-<label>Telefono</label>
-<input type="text" #identification="ngModel"  name="clientIdentification" [(ngModel)]="client.clientIdentification" class="form-control" required/>
-<label>Direccion</label>
-<input type="text" #identification="ngModel"  name="clientIdentification" [(ngModel)]="client.clientIdentification" class="form-control" required/>
+<input type="text" #clientIdentification="ngModel"  name="clientIdentification" [(ngModel)]="order.clientIdentification" class="form-control" required/>
+<label>Numero de licensia</label>
+<input type="text" #licenseNumber="ngModel"  name="licenseNumber" [(ngModel)]="order.licenseNumber" class="form-control" required/>
+
 <br/>
 <input type="submit" value="{{titulo}}" class="btn btn-success"/>
 </form>
